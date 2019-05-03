@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "42 Pretty Intra",
+  "description": "Customize the intra for 42 students",
+  "version": "1.0",
+
+  "icons": {
+    "128": "128.png"
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.intra.42.fr/*"],
+      "js": ["fixed-nav.js", "color.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs", "https://*.intra.42.fr/*"
+  ]
+}
