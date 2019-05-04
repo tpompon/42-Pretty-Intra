@@ -15,6 +15,10 @@
 
   "content_scripts": [
     {
+        "matches": ["https://*.intra.42.fr/*"],
+        "js": ["fixed-nav.js"]
+    },
+    {
         "matches": ["https://profile.intra.42.fr/", "https://profile.intra.42.fr/users/*"],
         "js": ["colors/profile.js"]
     },
@@ -32,5 +36,8 @@
     }
   ],
 
-  "permissions": ["https://*.intra.42.fr/*"]
+  "permissions": [
+      "https://*.intra.42.fr/*",
+      "storage"
+  ]
 }
