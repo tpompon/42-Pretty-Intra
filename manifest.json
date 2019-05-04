@@ -10,7 +10,7 @@
   },
 
   "background": {
-    "page": "background.html"
+    "page": "background.js"
   },
 
   "content_scripts": [
@@ -19,8 +19,12 @@
         "js": ["fixed-nav.js"]
     },
     {
-        "matches": ["https://profile.intra.42.fr/", "https://profile.intra.42.fr/users/*"],
+        "matches": ["https://profile.intra.42.fr/"],
         "js": ["colors/profile.js"]
+    },
+    {
+        "matches": ["https://profile.intra.42.fr/users/*"],
+        "js": ["colors/profile-other.js"]
     },
     {
         "matches": ["https://projects.intra.42.fr/"],
@@ -33,6 +37,10 @@
     {
         "matches": ["https://projects.intra.42.fr/projects/*"],
         "js": ["colors/projects-page.js"]
+    },
+    {
+        "matches": ["https://elearning.intra.42.fr/"],
+        "js": ["colors/elearning.js"]
     }
   ],
 

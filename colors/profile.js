@@ -21,12 +21,17 @@ setTimeout(() => {
   else if (coalition === 'The Alliance')
     colorSelected = colorAlliance;
 
+  chrome.storage.sync.set({colorSetting: colorSelected}, () => {
+    console.log('Color setting is set to ' + colorSelected);
+  });
+
   let events = document.getElementsByClassName("event-item");
   for (let i = 0; i < events.length; i++) {
-    if (events[i].getElementsByClassName("event-main")[0].getElementsByClassName('event-button')[0].dataset.class === 'event-modal') {
+    if (events[i].getAttribute('data-event-category') === 'meet') {
         events[i].style.borderColor = colorSelected;
         events[i].getElementsByClassName("event-main")[0].style.color = colorSelected;
         events[i].getElementsByClassName("event-left")[0].style.backgroundColor = colorSelected;
+        events[i].getElementsByClassName("event-overflow")[0].style.color = colorSelected;
     }
   }
 
@@ -62,10 +67,6 @@ setTimeout(() => {
   for (let i = 0; i < topicAuthors.length; i++)
     topicAuthors[i].getElementsByTagName('a')[0].style.color = colorSelected;
 
-  // let rects = document.getElementById("user-locations").getElementsByTagName("rect");
-  // for (let i = 0; i < rects.length; i++)
-  //   rects[i].setAttribute('fill', 'rgba(65, 128, 219, 1)');
-
   let rects = document.getElementById("user-locations").getElementsByTagName("rect");
   for (let i = 0; i < rects.length; i++) {
     let rectRGBA = rects[i].getAttribute('fill');
@@ -76,10 +77,17 @@ setTimeout(() => {
     }
   }
 
+  let forumTags = document.getElementsByClassName('forum-tag cursus-tag');
+  for (let i = 0; i < forumTags.length; i++) {
+    forumTags[i].style.color = colorSelected;
+    forumTags[i].style.borderColor = colorSelected;
+  }
+
   // profile.intra.42.fr/users/*
 
   let markedTitles = document.getElementsByClassName("marked-title");
-  for (let i = 0; i < markedTitles.length; i++)
-    markedTitles[i].getElementsByTagName('a')[0].style.color = colorSelected;
+  if (markedTitles)
+    for (let i = 0; i < markedTitles.length; i++)
+        markedTitles[i].getElementsByTagName('a')[0].style.color = colorSelected;
 
 }, 1000);
