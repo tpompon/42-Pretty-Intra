@@ -1,0 +1,87 @@
+.btn {
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.row {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#darkmode-btn { color: #243447; border-color: #243447; }
+#fixednav-btn { color: rgb(112,128,144); border-color: rgb(112,128,144); }
+
+.darkmode-btn-enabled {
+  color: white !important;
+  background-color: #243447;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.fixednav-btn-enabled {
+  color: white !important;
+  background-color: rgb(112,128,144);
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+#federation-btn { color: rgb(65, 128, 219); border-color: rgb(65, 128, 219); }
+#assembly-btn { color: rgb(160, 97, 209); border-color: rgb(160, 97, 209); }
+#order-btn { color: rgb(255, 105, 80); border-color: rgb(255, 105, 80); }
+#alliance-btn { color: rgb(51, 196, 127); border-color: rgb(51, 196, 127); }
+
+.federation-btn-enabled {
+  color: white !important;
+  background-color: rgb(65, 128, 219);
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.assembly-btn-enabled {
+  color: white !important;
+  background-color: rgb(160, 97, 209);
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.order-btn-enabled {
+  color: white;
+  background-color: rgb(255, 105, 80);
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.alliance-btn-enabled {
+  color: white;
+  background-color: rgb(51, 196, 127);
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
