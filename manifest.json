@@ -30,23 +30,23 @@
     },
     {
         "matches": ["https://profile.intra.42.fr/users/*"],
-        "js": ["colors/profile-other.js"]
+        "js": ["colors/profile-other.js", "dark-theme/profile-other.js"]
     },
     {
         "matches": ["https://projects.intra.42.fr/"],
-        "js": ["colors/projects.js"]
+        "js": ["colors/projects.js", "dark-theme/projects.js"]
     },
     {
         "matches": ["https://projects.intra.42.fr/projects/list"],
-        "js": ["colors/list-projects.js"]
+        "js": ["colors/list-projects.js", "dark-theme/list-projects.js"]
     },
     {
         "matches": ["https://projects.intra.42.fr/projects/*"],
-        "js": ["colors/projects-page.js"]
+        "js": ["colors/projects-page.js", "dark-theme/projects-page.js"]
     },
     {
         "matches": ["https://elearning.intra.42.fr/"],
-        "js": ["colors/elearning.js"]
+        "js": ["colors/elearning.js", "dark-theme/elearning.js"]
     }
   ],
 

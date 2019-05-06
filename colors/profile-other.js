@@ -51,10 +51,6 @@ setTimeout(() => {
   for (let i = 0; i < profileTitles.length; i++)
     profileTitles[i].style.color = colorSelected;
 
-  let projectItems = document.getElementsByClassName("project-item");
-  for (let i = 0; i < projectItems.length; i++)
-    projectItems[i].style.color = colorSelected;
-
   let expertiseItems = document.getElementsByClassName("expertise-item");
   for (let i = 0; i < expertiseItems.length; i++)
     expertiseItems[i].getElementsByTagName('h5')[0].getElementsByTagName('a')[0].style.color = colorSelected;

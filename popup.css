@@ -1,3 +1,10 @@
+hr {
+   border: 0;
+   border-top: 1px solid #000;
+   opacity: .15;
+   width: 95%;
+}
+
 .btn {
   width: 180px;
   height: 50px;
@@ -12,6 +19,39 @@
   -moz-transition: background-color 0.3s ease-out;
   -o-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
+}
+
+.btn-little {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  border-radius: 50%;
 }
 
 .row {
