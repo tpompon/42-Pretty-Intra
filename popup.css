@@ -21,8 +21,8 @@ hr {
   transition: background-color 0.3s ease-out;
 }
 
-.btn-little {
-  width: 50px;
+.btn-large {
+  width: 380px;
   height: 50px;
   text-align: center;
   background: #ffffff;
@@ -64,8 +64,29 @@ hr {
   margin-bottom: 20px;
 }
 
+#coalition-theme-btn { color: black; border-color: black; }
+#onoff-btn { color: #B22222; border-color: #B22222; }
 #darkmode-btn { color: #243447; border-color: #243447; }
 #fixednav-btn { color: rgb(112,128,144); border-color: rgb(112,128,144); }
+
+.coalition-theme-btn-enabled {
+  color: white !important;
+  background-color: black;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.onoff-btn-enabled {
+  color: white !important;
+  border-color: #3CB371 !important;
+  background-color: #3CB371;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
 
 .darkmode-btn-enabled {
   color: white !important;

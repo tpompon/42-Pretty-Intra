@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,700');
+
 body {
 	width: 100%;
 	height: 100%;
 	background-color: rgb(20, 29, 38);
+	overflow: hidden;
 }
+
+.creator {
+	position: absolute;
+	bottom: 5%;
+	text-align: center;
+	width: 100%;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.creator #ext-name { font-weight: bold; }
+.creator #made-by { font-style: italic; }
 
 .logo {
    position: absolute;

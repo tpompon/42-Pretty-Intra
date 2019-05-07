@@ -27,6 +27,8 @@ function resetButtons(onlyCoalitions) {
 
   let darkmode_btn = document.getElementById('darkmode-btn');
   let fixednav_btn = document.getElementById('fixednav-btn');
+  let onoff_btn = document.getElementById('onoff-btn');
+  let coalitiontheme_btn = document.getElementById('coalition-theme-btn');
 
   let federation_btn = document.getElementById('federation-btn');
   let assembly_btn = document.getElementById('assembly-btn');
@@ -38,6 +40,10 @@ function resetButtons(onlyCoalitions) {
       darkmode_btn.classList.remove('darkmode-btn-enabled')
     if (fixednav_btn.classList.contains('fixednav-btn-enabled'))
       fixednav_btn.classList.remove('fixednav-btn-enabled')
+    if (onoff_btn.classList.contains('onoff-btn-enabled'))
+      onoff_btn.classList.remove('onoff-btn-enabled')
+    if (coalitiontheme_btn.classList.contains('coalition-theme-btn-enabled'))
+        coalitiontheme_btn.classList.remove('coalition-theme-btn-enabled')
   }
   if (federation_btn.classList.contains('federation-btn-enabled'))
     federation_btn.classList.remove('federation-btn-enabled')
@@ -54,6 +60,8 @@ function setButtons() {
 
   let darkmode_btn = document.getElementById('darkmode-btn');
   let fixednav_btn = document.getElementById('fixednav-btn');
+  let onoff_btn = document.getElementById('onoff-btn');
+  let coalitiontheme_btn = document.getElementById('coalition-theme-btn');
 
   let federation_btn = document.getElementById('federation-btn');
   let assembly_btn = document.getElementById('assembly-btn');
@@ -78,6 +86,16 @@ function setButtons() {
       alliance_btn.classList.add('alliance-btn-enabled');
   });
 
+  chrome.storage.sync.get(['coalitionTheme'], (res) => {
+    if (res.coalitionTheme === 'enabled')
+      coalitiontheme_btn.classList.add('coalition-theme-btn-enabled');
+  });
+
+  chrome.storage.sync.get(['onoffButton'], (res) => {
+    if (res.onoffButton === 'enabled')
+      onoff_btn.classList.add('onoff-btn-enabled');
+  });
+
   chrome.storage.sync.get(['darkMode'], (res) => {
     if (res.darkMode === 'enabled')
       darkmode_btn.classList.add('darkmode-btn-enabled');
@@ -93,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let darkmode_btn = document.getElementById('darkmode-btn');
     let fixednav_btn = document.getElementById('fixednav-btn');
+    let onoff_btn = document.getElementById('onoff-btn');
+    let coalitiontheme_btn = document.getElementById('coalition-theme-btn');
 
     let federation_btn = document.getElementById('federation-btn');
     let assembly_btn = document.getElementById('assembly-btn');
@@ -100,6 +120,38 @@ document.addEventListener('DOMContentLoaded', () => {
     let alliance_btn = document.getElementById('alliance-btn');
 
     setButtons();
+
+    coalitiontheme_btn.addEventListener('click', () => {
+        chrome.tabs.reload();
+        if (coalitiontheme_btn.classList.contains('coalition-theme-btn-enabled')) {
+          coalitiontheme_btn.classList.remove('coalition-theme-btn-enabled');
+          chrome.storage.sync.set({coalitionTheme: 'disabled'}, () => {
+            console.log('Coalition Theme is set to ' + 'disabled');
+          });
+        }
+        else {
+          coalitiontheme_btn.classList.add('coalition-theme-btn-enabled');
+          chrome.storage.sync.set({coalitionTheme: 'enabled'}, () => {
+            console.log('Coalition Theme setting is set to ' + 'enabled');
+          });
+        }
+    });
+
+    onoff_btn.addEventListener('click', () => {
+        chrome.tabs.reload();
+        if (onoff_btn.classList.contains('onoff-btn-enabled')) {
+          onoff_btn.classList.remove('onoff-btn-enabled');
+          chrome.storage.sync.set({onoffButton: 'disabled'}, () => {
+            console.log('onoffButton is set to ' + 'disabled');
+          });
+        }
+        else {
+          onoff_btn.classList.add('onoff-btn-enabled');
+          chrome.storage.sync.set({onoffButton: 'enabled'}, () => {
+            console.log('onoffButton setting is set to ' + 'enabled');
+          });
+        }
+    });
 
     darkmode_btn.addEventListener('click', () => {
         chrome.tabs.reload();
