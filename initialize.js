@@ -131,7 +131,7 @@ loadingScreenStyle.innerHTML =
     '100% { -o-transform: scale(1); }' +
   '}'
 
-setTimeout(() => { loadingScreen.style.display = 'none'; }, 2000);
+setTimeout(() => { html.removeChild(loadingScreen); html.removeChild(loadingScreenStyle); }, 2000);
 
 let colorDefault = "rgba(0, 0, 0, 0.65)";
 let darkModeDefault = 'disabled';
